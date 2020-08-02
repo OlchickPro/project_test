@@ -177,6 +177,10 @@ input[type="tel"] {
   color: #616161;
 }
 
+.header-menu-list li a:hover {
+  text-shadow: 0 0 5px darkblue;
+}
+
 .header-menu-list li a[href^="tel:"] {
   font-family: "Bold_Calibri";
   color: #141419;
@@ -234,6 +238,11 @@ input[type="tel"] {
 .block-1-body form {
   position: relative;
   z-index: 5;
+}
+
+.block-1-body form.active {
+  position: relative;
+  z-index: 1;
 }
 
 .block-1__header {
@@ -640,11 +649,13 @@ input[type="tel"] {
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    z-index: 20;
+    top: 20%;
     left: -500%;
     margin: 0;
     width: 100%;
+    height: 100%;
     background-color: #f8f8f8;
   }
 
@@ -653,11 +664,13 @@ input[type="tel"] {
   }
 
   .header-menu-list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    display: block;
     padding-left: 20px;
+  }
+
+  .header-logo {
+    position: relative;
+    z-index: 2;
   }
 
   .icon-menu {

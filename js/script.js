@@ -35,19 +35,29 @@ function ibg() {
 ibg();
 
 //Клик вне области
-// $(document).on('click touchstart', function (e) {
-// 	if (!$(e.target).is(".select *")) {
-// 		$('.select').removeClass('active');
-// 	};
-// });
+$(document).on('click touchstart', function (e) {
+	if (!$(e.target).is(".select *")) {
+		$('.select').removeClass('active');
+	};
+});
 $('.header-menu__icon').click(function (event) {
 	$(this).toggleClass('active');
+	$('.block-1__form').toggleClass('active');
 	$('.header-menu').toggleClass('active');
 	if ($(this).hasClass('active')) {
 		$('body').data('scroll', $(window).scrollTop());
 	}
 	$('body').toggleClass('lock');
 	if (!$(this).hasClass('active')) {
+		$('body,html').scrollTop(parseInt($('body').data('scroll')));
+	}
+});
+$('.header-menu-list').click(function (event) {
+	if ($('.header-menu__icon').hasClass('active')) {
+		$('.header-menu').toggleClass('active');
+		$('.header-menu__icon').toggleClass('active');
+		$('.block-1__form').toggleClass('active');
+		$('body').toggleClass('lock');
 		$('body,html').scrollTop(parseInt($('body').data('scroll')));
 	}
 });
