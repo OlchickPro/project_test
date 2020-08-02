@@ -1,15 +1,15 @@
 @font-face {
-  font-family: "Calibri";
+  font-family: "Bold_Calibri";
   font-display: swap;
-  src: url("../fonts/Calibri.woff") format("woff"), url("../fonts/Calibri.woff2") format("woff2");
+  src: url("../fonts/Bold_Calibri.woff") format("woff"), url("../fonts/Bold_Calibri.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Bold_Calibri";
+  font-family: "Calibri";
   font-display: swap;
-  src: url("../fonts/Bold_Calibri.woff") format("woff"), url("../fonts/Bold_Calibri.woff2") format("woff2");
+  src: url("../fonts/Calibri.woff") format("woff"), url("../fonts/Calibri.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -277,7 +277,7 @@ input[type="tel"] {
   margin-bottom: 131px;
 }
 
-.container-1 {
+.block-2-container {
   margin: 0 auto;
   max-width: 820px;
 }
@@ -544,7 +544,7 @@ input[type="tel"] {
     margin: 0 auto 38px auto;
   }
 
-  .container-1 {
+  .block-2-container {
     padding: 0 5px;
   }
 
